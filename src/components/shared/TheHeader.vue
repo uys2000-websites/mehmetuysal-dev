@@ -1,29 +1,16 @@
 <template>
-  <header class="px-4 pt-4 sticky top-0">
+  <header class="px-4 pt-4 sticky top-0 z-10">
     <div class="bg-neutral text-neutral-content flex justify-between items-center p-4 rounded-box">
       <RouterLink class="btn btn-sm btn-ghost" :to="{ name: 'HomeView' }">
         Mehmet Uysal
       </RouterLink>
       <div class="flex gap-2">
-        <RouterLink class="btn btn-sm btn-ghost" :to="{ name: 'AboutView' }">
-          About
+        <RouterLink class="btn btn-sm btn-ghost" :to="{ name: 'LinksView' }">
+          Links
         </RouterLink>
-        <Dropdown class="dropdown-end">
-          <template #title>
-            <div class="btn btn-sm btn-ghost">
-              Menu
-            </div>
-          </template>
-          <template #content>
-            <DropdownContent class="bg-neutral rounded-btn w-max mt-1">
-              <div class="flex flex-col">
-                <RouterLink class="btn btn-xs btn-ghost" :to="{ name: 'AppView' }">
-                  App
-                </RouterLink>
-              </div>
-            </DropdownContent>
-          </template>
-        </Dropdown>
+        <RouterLink class="btn btn-sm btn-ghost" :to="{ name: 'AppsView' }">
+          Apps
+        </RouterLink>
       </div>
     </div>
   </header>
