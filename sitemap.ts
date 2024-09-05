@@ -1,4 +1,4 @@
-import { appendFileSync, writeFileSync, writeSync } from "node:fs";
+import { appendFileSync, writeFileSync } from "node:fs";
 import { RouteRecordRaw } from "vue-router";
 
 const sitemapPath = "./public/sitemap.xml";
@@ -9,6 +9,7 @@ const getRoutes = function (routes: RouteRecordRaw[], parent: string = "") {
     getRoute(route, parent);
   }
 };
+
 const getRoute = function (route: RouteRecordRaw, parent: string) {
   if (route.children?.length) getRoutes(route.children, parent + route.path);
   else {
