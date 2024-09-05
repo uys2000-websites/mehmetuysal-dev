@@ -2,7 +2,7 @@ import { appendFileSync, writeFileSync, writeSync } from "node:fs";
 import { RouteRecordRaw } from "vue-router";
 
 const sitemapPath = "./public/sitemap.xml";
-const baseUrl = "https//mehmetuysal.dev";
+const baseUrl = "https://mehmetuysal.dev";
 const getRoutes = function (routes: RouteRecordRaw[], parent: string = "") {
   for (let i = 0; i < routes.length; i++) {
     const route = routes[i];
