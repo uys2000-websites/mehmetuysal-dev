@@ -34,12 +34,15 @@
 const ulogger = { name: 'ULogger', links: [{ name: "Web", url: "https://ulogger.mehmetuysal.dev" }, { name: "Types", url: "https://github.com/uys2000-projects/Types-Ulogger" }, { name: "Github", url: "https://github.com/uys2000-projects/ULogger" }] }
 const umorse = { name: 'UMorse', links: [{ name: "Web", url: "https://umorse.mehmetuysal.dev" }, { name: "Play Store", url: "https://play.google.com/store/apps/details?id=com.uys2000.umorse&hl=tr&pli=1" }, { name: "Extension", url: "https://chromewebstore.google.com/detail/umorse-morse-code/fgmklgmobnpdkeaohelamfccalnnkpbe" }, { name: "Github", url: "https://github.com/uys2000-projects/UMorse" }] }
 const uplayer = { name: 'UPlayer', links: [{ name: "Web", url: "https://uplayer.mehmetuysal.dev" }, { name: "Windows", url: "https://github.com/uys2000-projects/UPlayer/releases" }, { name: "Linux", url: "https://github.com/uys2000-projects/UPlayer/releases" }, { name: "Github", url: "https://github.com/uys2000-projects/UPlayer" }] }
+const ulink = { name: 'ULink', links: [{ name: "Web", url: "https://ulink.mehmetuysal.dev" }, { name: "Github Functions", url: "https://github.com/uys2000-websites/ulink-mehmetuysal-dev-functions" }, { name: "Github", url: "https://github.com/uys2000-websites/ulink-mehmetuysal-dev" }] }
 export default {
   data() {
     return {
       apps: [
         ulogger,
-        umorse, uplayer
+        umorse,
+        uplayer,
+        ulink
       ] as Array<{ name: string, links: Array<{ name: string, url: string }> }>
     }
   }
