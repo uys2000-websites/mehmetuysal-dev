@@ -40,6 +40,24 @@ export const routes = [
           changefreq: "never",
         },
       },
+      {
+        path: "privacy",
+        name: "PrivacyView",
+        component: () => import("../views/PrivacyView.vue"),
+        children: [
+          {
+            path: "uplayer",
+            name: "UPlayer",
+            component: () => import("../views/Privacy/UPlayer.vue"),
+            meta: {
+              title: "UPlayer Privacy Policy",
+              lastmod: "2024-10-15",
+              priority: "0.8",
+              changefreq: "never",
+            },
+          },
+        ],
+      },
     ],
   },
 ] as RouteRecordRaw[];
