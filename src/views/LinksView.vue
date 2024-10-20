@@ -1,9 +1,9 @@
 <template>
-  <div class="hero min-h-screen -mt-[80px]" style="background-image: url(/links.webp);">
-    <div class="hero-overlay bg-opacity-60"></div>
-    <div class="hero-content text-neutral-content text-center">
-      <div class="max-w-lg">
-        <div class="overflow-x-auto w-full">
+  <div class="-mt-[80px] min-h-screen w-full bg-center bg-cover flex" style="background-image: url(/links.webp);">
+    <div class="min-h-screen w-full flex flex-col justify-center items-center relative p-4">
+      <div class="absolute w-full h-full bg-opacity-60 bg-neutral"></div>
+      <div class="max-w-lg w-full flex flex-shrink">
+        <div class="min-w-full overflow-x-auto flex-shrink">
           <table class="table bg-black bg-opacity-40">
             <thead>
               <tr>
