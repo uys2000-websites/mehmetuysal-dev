@@ -35,7 +35,7 @@ export const routes = [
         component: () => import("../views/AppsView.vue"),
         meta: {
           title: "Apps",
-          lastmod: "2024-09-04",
+          lastmod: "2024-10-20",
           priority: "0.8",
           changefreq: "never",
         },
@@ -52,7 +52,7 @@ export const routes = [
             meta: {
               title: "UPlayer Privacy Policy",
               lastmod: "2024-10-15",
-              priority: "0.8",
+              priority: "0.1",
               changefreq: "never",
             },
           },
