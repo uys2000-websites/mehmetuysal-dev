@@ -31,6 +31,7 @@
 </template>
 
 <script lang="ts">
+const telegram = { name: 'Telegram', links: [{ name: "link", url: "https://t.me/uysal2000" }] }
 const linkedin = { name: 'LinkedIn', links: [{ name: "link", url: "https://www.linkedin.com/in/uys2000" }] }
 const github = { name: 'Github', links: [{ name: "link", url: "https://github.com/uys2000" },] }
 const githubp = { name: 'Github Projects', links: [{ name: "link", url: "https://github.com/uys2000-projects" },] }
@@ -40,6 +41,7 @@ export default {
   data() {
     return {
       apps: [
+        telegram,
         linkedin,
         github,
         githubp,

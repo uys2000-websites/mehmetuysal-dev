@@ -23,7 +23,7 @@ export const routes = [
         name: "LinksView",
         component: () => import("../views/LinksView.vue"),
         meta: {
-          title: "Apps",
+          title: "Links",
           lastmod: "2024-09-04",
           priority: "0.8",
           changefreq: "never",
