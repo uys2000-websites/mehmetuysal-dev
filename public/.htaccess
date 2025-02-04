@@ -1,3 +1,7 @@
-RewriteCond %{HTTP_HOST} ^mehmetuysal\.dev$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.mehmetuysal\.dev$
-RewriteRule ^(.*)$ "https\:\/\/www\.anotherdomain\.com\/index\.html$1" [R=301,L]
+RewriteEngine On
+RewriteBase /
+RewriteCond %{ENV:HTTPS} !on [NC]
+RewriteRule ^(.*)$ https://mehmetuysal.dev/$1 [R,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule . index.html [L]
