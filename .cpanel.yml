@@ -1,7 +1,6 @@
 deployment:
   tasks:
-    - export NVM_DIR="$HOME/.nvm"
-    - $NVM_DIR/nvm.sh
+    - /home/mehmetu/.nvm/nvm.sh
     - nvm use 20
     - yarn
     - yarn build
