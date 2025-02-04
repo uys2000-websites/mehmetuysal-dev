@@ -1,0 +1,5 @@
+deployment:
+  tasks:
+    - yarn build
+    - export DEPLOYPATH=/home/mehmetu/public_html/
+    - /bin/cp -R dist $DEPLOYPATH
