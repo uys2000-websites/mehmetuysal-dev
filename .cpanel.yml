@@ -1,6 +1,8 @@
 deployment:
   tasks:
-    - /home/mehmetu/.nvm/versions/node/v20.18.2/bin/yarn
-    - /home/mehmetu/.nvm/versions/node/v20.18.2/bin/yarn build
+    - export NVM_DIR="$HOME/.nvm"
+    - nvm use 20
+    - yarn
+    - yarn build
     - export DEPLOYPATH=/home/mehmetu/public_html/
     - /bin/cp -R dist $DEPLOYPATH
