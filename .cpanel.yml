@@ -1,5 +1,3 @@
 deployment:
   tasks:
-    - sh ./build.sh
-    - export DEPLOYPATH=/home/mehmetu/public_html/
-    - /bin/cp -R dist $DEPLOYPATH
+    - sh ./build.sh &
