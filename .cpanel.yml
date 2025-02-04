@@ -1,8 +1,5 @@
 deployment:
   tasks:
-    - /home/mehmetu/.nvm/nvm.sh
-    - nvm use 20
-    - yarn
-    - yarn build
+    - sh ./build.sh
     - export DEPLOYPATH=/home/mehmetu/public_html/
     - /bin/cp -R dist $DEPLOYPATH
