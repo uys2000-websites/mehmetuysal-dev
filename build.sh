@@ -9,4 +9,5 @@ export DEPLOYPATH=/home/mehmetu/public_html/
 yarn
 yarn build
 rm -rf $DEPLOYPATH/*
-/bin/cp -R dist/* $DEPLOYPATH
+/bin/cp -R dist/. $DEPLOYPATH
+/bin/cp -R dist/.htaccess $DEPLOYPATH/.htaccess
