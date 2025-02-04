@@ -8,4 +8,5 @@ export DEPLOYPATH=/home/mehmetu/public_html/
 
 yarn
 yarn build
-/bin/cp -R dist/ $DEPLOYPATH
+rm -rf $DEPLOYPATH/*
+/bin/cp -R dist/* $DEPLOYPATH
