@@ -1,0 +1,3 @@
+RewriteCond %{HTTP_HOST} ^mehmetuysal\.dev$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.mehmetuysal\.dev$
+RewriteRule ^(.*)$ "https\:\/\/www\.anotherdomain\.com\/index\.html$1" [R=301,L]
