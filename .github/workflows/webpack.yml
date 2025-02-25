@@ -1,10 +1,8 @@
 name: NodeJS with Webpack
 
-on:
-  push:
-    tags:
-      - "v*"
-    branches: ["main"]
+push:
+  tags:
+    - "v*.*.*"
 
 jobs:
   build:
