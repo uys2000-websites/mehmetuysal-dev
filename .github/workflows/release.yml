@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     tags:
-      - "v*" # Sadece v ile başlayan tag'lerde çalışır. Örneğin: v1.0.0
+      - "v*" # Sadece "v" ile başlayan tag'leri tetikler
 
 jobs:
   build:
@@ -33,4 +33,5 @@ jobs:
         with:
           files: release.zip
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

@@ -1,0 +1,36 @@
+name: Auto Tag and Push
+
+on:
+  push:
+    branches:
+      - main # Ana branch'in adını değiştir, eğer farklıysa
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Önceki commitleri de alabilmesi için
+
+      - name: Get latest tag
+        id: get_latest_tag
+        run: echo "LATEST_TAG=$(git tag --sort=-v:refname | head -n 1)" >> $GITHUB_ENV
+
+      - name: Determine new tag
+        id: new_tag
+        run: |
+          if [[ -z "${{ env.LATEST_TAG }}" ]]; then
+            NEW_TAG="v1.0.0"
+          else
+            NEW_TAG="v$(echo ${{ env.LATEST_TAG }} | awk -F. '{$NF++; print $0}' OFS=.)"
+          fi
+          echo "NEW_TAG=$NEW_TAG" >> $GITHUB_ENV
+
+      - name: Create and push new tag
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git tag ${{ env.NEW_TAG }}
+          git push origin ${{ env.NEW_TAG }}
