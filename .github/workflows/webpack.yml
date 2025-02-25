@@ -1,16 +1,13 @@
-name: NodeJS with Webpack
+name: Build and Release
 
-push:
-  tags:
-    - "v*.*.*"
+on:
+  push:
+    tags:
+      - "v*" # Sadece v ile başlayan tag'lerde çalışır. Örneğin: v1.0.0
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [20.x]
 
     steps:
       - name: Checkout repository
