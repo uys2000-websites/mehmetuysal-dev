@@ -26,6 +26,9 @@
           </table>
         </div>
       </div>
+      <div class="absolute bottom-4 bg-base-300 text-base-content px-4 py-1 rounded-box">
+        <a class="link" target="__blank" href="https://id.cenuta.com/?affid=2199">Hosting</a>
+      </div>
     </div>
   </div>
 </template>
