@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Önceki commitleri de alabilmesi için
+          fetch-depth: 0
 
       - name: Determine new tag
         id: new_tag
