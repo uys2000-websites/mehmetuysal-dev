@@ -33,6 +33,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.auto_tag.outputs.new_tag }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
