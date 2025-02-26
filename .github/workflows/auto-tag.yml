@@ -22,7 +22,5 @@ jobs:
 
       - name: Create and push new tag
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git tag ${{ env.NEW_TAG }}
-          git push origin ${{ env.NEW_TAG }}
+          git tag $NEW_TAG
+          git push origin $NEW_TAG
