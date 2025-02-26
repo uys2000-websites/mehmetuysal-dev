@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     tags:
-      - "v*" # Sadece "v" ile başlayan tag'leri tetikler
+      - "*" # Sadece "v" ile başlayan tag'leri tetikler
 
 jobs:
   build:
