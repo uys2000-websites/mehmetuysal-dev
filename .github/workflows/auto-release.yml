@@ -52,4 +52,5 @@ jobs:
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ needs.auto_tag.outputs.new_tag }}
           files: release.zip
