@@ -14,18 +14,10 @@ jobs:
         with:
           fetch-depth: 0 # Önceki commitleri de alabilmesi için
 
-      - name: Get latest tag
-        id: get_latest_tag
-        run: echo "LATEST_TAG=$(git tag --sort=-v:refname | head -n 1)" >> $GITHUB_ENV
-
       - name: Determine new tag
         id: new_tag
         run: |
-          if [[ -z "${{ env.LATEST_TAG }}" ]]; then
-            NEW_TAG="v1.0.0"
-          else
-            NEW_TAG="v$(echo ${{ env.LATEST_TAG }} | awk -F. '{$NF++; print $0}' OFS=.)"
-          fi
+          NEW_TAG="v$(date +%s)"
           echo "NEW_TAG=$NEW_TAG" >> $GITHUB_ENV
 
       - name: Create and push new tag
