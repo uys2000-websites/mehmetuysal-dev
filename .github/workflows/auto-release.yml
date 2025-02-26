@@ -22,6 +22,7 @@ jobs:
         run: |
           NEW_TAG="v$(date +%s)"
           echo "NEW_TAG=$NEW_TAG" >> $GITHUB_ENV
+          echo "new_tag=$NEW_TAG" >> $GITHUB_OUTPUT
 
       - name: Create and push new tag
         run: |
