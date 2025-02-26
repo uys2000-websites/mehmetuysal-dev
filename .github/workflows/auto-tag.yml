@@ -24,5 +24,3 @@ jobs:
         run: |
           git tag ${{ env.NEW_TAG }}
           git push origin ${{ env.NEW_TAG }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
